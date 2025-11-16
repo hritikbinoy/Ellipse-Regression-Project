@@ -7,3 +7,7 @@ matplotlib
 tqdm
 scikit-learn
 brevitas
+onnx
+onnxscript
+onnxruntime
+onnxoptimizer
