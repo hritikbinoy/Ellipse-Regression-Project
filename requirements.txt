@@ -11,3 +11,4 @@ onnx
 onnxscript
 onnxruntime
 onnxoptimizer
+netron
