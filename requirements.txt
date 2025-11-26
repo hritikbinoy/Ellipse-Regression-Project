@@ -3,6 +3,7 @@ pillow
 numpy
 torch
 torchvision
+pandas
 matplotlib
 tqdm
 scikit-learn
@@ -12,3 +13,5 @@ onnxscript
 onnxruntime
 onnxoptimizer
 netron
+finn-base 
+qonnx
