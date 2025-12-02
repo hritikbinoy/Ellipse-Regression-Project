@@ -1,0 +1,35 @@
+import finn.builder.build_dataflow as build
+import finn.builder.build_dataflow_config as build_cfg
+import os
+import shutil
+
+# Define the model file path
+model_dir = os.environ['FINN_ROOT'] + "/notebooks/end2end_example/cybersecurity"
+model_file = model_dir + "/cybsec-mlp-ready.onnx"
+
+# Define the output directory for the build
+output_dir = "output_kria_kv260"
+
+# Delete previous run results if they exist
+if os.path.exists(output_dir):
+    shutil.rmtree(output_dir)
+    print("Previous run results deleted!")
+
+# Create the build configuration for the Kria KV260
+cfg_kria_kv260 = build.DataflowBuildConfig(
+    output_dir=output_dir,
+    mvau_wwidth_max=80,
+    target_fps=1000000,
+    synth_clk_period_ns=10.0,
+    board="Kria-KV260",  # Specify the Kria KV260 board
+    fpga_part="xczu3eg-1-e",  # Specify the FPGA part for the Kria KV260
+    generate_outputs=[
+        build_cfg.DataflowOutputType.STITCHED_IP,
+        build_cfg.DataflowOutputType.RTLSIM_PERFORMANCE,
+        build_cfg.DataflowOutputType.OOC_SYNTH,
+    ],
+)
+
+# Launch the build
+%%time
+build.build_dataflow_cfg(model_file, cfg_kria_kv260)
