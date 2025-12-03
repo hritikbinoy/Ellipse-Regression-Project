@@ -1,17 +1,43 @@
+# Core dependencies
 ipykernel
 pillow
-numpy
-torch
+numpy<=1.26.4
+torch>=1.12
 torchvision
+torchaudio
 pandas
 matplotlib
 tqdm
 scikit-learn
-brevitas
+
+# ONNX ecosystem
 onnx
 onnxscript
 onnxruntime
 onnxoptimizer
 netron
-finn-base 
+
+# Quantization and FINN
+brevitas>=0.10.0
 qonnx
+finn-base
+
+# FINN build dependencies
+pytest
+pytest-xdist
+importlib-resources
+pkgutil-resolve-name
+toposort
+dataclasses-json
+setuptools<70.0
+
+# Hardware simulation
+pyverilator @ git+https://github.com/maltanar/pyverilator.git
+
+# Brevitas examples (optional but needed for some FINN utilities)
+# If installation fails, comment out this line
+brevitas-examples
+
+# Additional utilities
+sympy
+typing-extensions>=3.7.4
