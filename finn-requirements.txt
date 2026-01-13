@@ -1,0 +1,38 @@
+
+numpy 
+onnx 
+onnxruntime
+qonnx
+jupyter 
+ipykernel
+tclwrapper
+torch
+torchvision
+pandas
+brevitas
+netron
+
+# Hardware simulation
+pyverilator @ git+https://github.com/maltanar/pyverilator.git
+
+# Brevitas examples (optional but needed for some FINN utilities)
+# If installation fails, comment out this line
+# brevitas-examples
+
+# FINN build dependencies
+pytest
+pytest-xdist
+importlib-resources
+pkgutil-resolve-name
+toposort
+dataclasses-json
+setuptools<70.0
+
+# Additional utilities
+sympy
+typing-extensions>=3.7.4
+
+#finn
+pip install git+https://github.com/Xilinx/finn.git
+
+

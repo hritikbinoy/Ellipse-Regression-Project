@@ -1,0 +1,25 @@
+# Core dependencies
+ipykernel
+pillow
+numpy
+torch
+torchvision
+torchaudio
+pandas
+matplotlib
+tqdm
+scikit-learn
+pytest
+
+# ONNX ecosystem
+onnx
+onnxscript
+onnxruntime
+onnxoptimizer
+netron
+
+# Quantization and FINN
+brevitas>=0.12.1
+qonnx
+finn-base
+
