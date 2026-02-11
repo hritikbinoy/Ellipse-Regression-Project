@@ -45,9 +45,9 @@ io_shape_dict = {
     # folded / packed shapes below depend on idt/odt and input/output
     # PE/SIMD parallelization settings -- these are calculated by the
     # FINN compiler.
-    "ishape_folded" : [(1, 256, 1)],
+    "ishape_folded" : [(1, 32, 8)],
     "oshape_folded" : [(1, 5, 1)],
-    "ishape_packed" : [(1, 256, 1)],
+    "ishape_packed" : [(1, 32, 8)],
     "oshape_packed" : [(1, 5, 3)],
     "input_dma_name" : ['idma0'],
     "output_dma_name" : ['odma0'],
