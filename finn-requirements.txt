@@ -11,6 +11,7 @@ torchvision
 pandas
 brevitas
 netron
+tqdm
 
 # Hardware simulation
 pyverilator @ git+https://github.com/maltanar/pyverilator.git
